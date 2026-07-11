@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Leon Wu — Embedded Firmware Engineer focused on STM32, RTOS, Embedded Linux, Buildroot, BSP and device drivers." />
+  <meta name="theme-color" content="#08090b" />
+  <title>Leon Wu — Embedded Firmware Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Leon Wu home">
+        <span class="brand-dot"></span>
+        LEON.WU
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Let's talk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> AVAILABLE FOR EMBEDDED OPPORTUNITIES</p>
+          <h1>
+            Building reliable systems
+            <span>from MCU to Linux.</span>
+          </h1>
+          <p class="hero-lead">
+            I'm Leon Wu, an embedded firmware engineer transitioning from mechanical and control engineering into
+            STM32, RTOS, Embedded Linux, Buildroot, BSP and device-driver development.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button ghost" href="#contact">Contact me</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>10+</strong><span>Years across engineering roles</span></div>
+            <div><strong>MCU → Linux</strong><span>Current technical direction</span></div>
+            <div><strong>Taiwan</strong><span>Open to opportunities nationwide</span></div>
+          </div>
+        </div>
+
+        <div class="terminal reveal delay-1" aria-label="Terminal introduction">
+          <div class="terminal-bar">
+            <div class="terminal-dots"><i></i><i></i><i></i></div>
+            <span>leon@embedded:~</span>
+          </div>
+          <div class="terminal-body" id="terminal">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="result">Leon Wu — Embedded Firmware Engineer</p>
+            <p><span class="prompt">$</span> cat focus.txt</p>
+            <p class="result">STM32 · RTOS · Embedded Linux · Buildroot · BSP · Drivers</p>
+            <p><span class="prompt">$</span> ls projects/</p>
+            <p class="result accent">BossMonitor-AI/ &nbsp; RK3588-Buildroot/ &nbsp; STM32-Labs/</p>
+            <p><span class="prompt">$</span> cat next_goal.txt</p>
+            <p class="result">Grow into a Linux BSP / Device Driver Engineer.</p>
+            <p><span class="prompt">$</span> <span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-strip reveal delay-2" aria-label="Core technologies">
+        <span>C</span><span>STM32</span><span>FreeRTOS</span><span>Linux</span><span>Buildroot</span><span>Docker</span><span>Git</span><span>UART</span><span>I²C</span><span>SPI</span>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading reveal">
+        <p class="section-kicker">01 / ABOUT</p>
+        <h2>Engineering depth, rebuilt for embedded systems.</h2>
+        <p>
+          My background spans aerospace controls, mechanical engineering, automation and firmware.
+          That cross-domain experience helps me reason about the complete system—not only the code.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="panel about-story reveal">
+          <p>
+            I began with control engineering at National Cheng Kung University and worked across semiconductor equipment,
+            mechanical design, robotics and industrial systems. Today, I focus on production firmware and hands-on embedded development.
+          </p>
+          <p>
+            My current path is clear: deepen low-level C and RTOS skills, master the Embedded Linux build flow,
+            and move toward BSP and Linux device drivers.
+          </p>
+        </article>
+
+        <div class="skills-grid reveal delay-1">
+          <article class="skill-card">
+            <p class="skill-num">01</p>
+            <h3>MCU Firmware</h3>
+            <p>STM32, timers, PWM, ADC, UART, I²C, SPI, EXTI and protocol integration.</p>
+          </article>
+          <article class="skill-card">
+            <p class="skill-num">02</p>
+            <h3>Embedded Linux</h3>
+            <p>Linux CLI, Docker, cross-compilation, Buildroot, root filesystem and board bring-up workflows.</p>
+          </article>
+          <article class="skill-card">
+            <p class="skill-num">03</p>
+            <h3>System Thinking</h3>
+            <p>Mechanical, controls and field-debugging experience across hardware, firmware and customer systems.</p>
+          </article>
+          <article class="skill-card">
+            <p class="skill-num">04</p>
+            <h3>Next Layer</h3>
+            <p>FreeRTOS internals, boot process, BSP architecture and Linux device drivers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading reveal">
+        <p class="section-kicker">02 / SELECTED PROJECTS</p>
+        <h2>Projects that show how I learn and build.</h2>
+        <p>Each project is designed to turn a learning topic into a working, explainable system.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-top">
+            <span class="project-index">P01</span>
+            <span class="status">IN DEVELOPMENT</span>
+          </div>
+          <div class="project-visual boss">
+            <div class="camera-ring"></div>
+            <div class="signal s1"></div>
+            <div class="signal s2"></div>
+            <div class="signal s3"></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">EDGE VISION · LINUX · MCU</p>
+            <h3>BossMonitor-AI</h3>
+            <p>
+              Orange Pi Zero + USB camera + STM32 architecture for motion detection, image capture and edge-side automation.
+            </p>
+            <div class="tags"><span>Orange Pi</span><span>Python</span><span>STM32</span><span>UART</span><span>OpenCV</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-top">
+            <span class="project-index">P02</span>
+            <span class="status">ACTIVE LEARNING</span>
+          </div>
+          <div class="project-visual buildroot">
+            <code>Docker → SDK → Toolchain<br>→ Buildroot → Image → Boot</code>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">EMBEDDED LINUX · RK3588</p>
+            <h3>RK3588 Buildroot Lab</h3>
+            <p>
+              Reproducible Linux build environment using Docker, cross-toolchains, SDK workflows and target-image generation.
+            </p>
+            <div class="tags"><span>Buildroot</span><span>Docker</span><span>Cross Compile</span><span>RK3588</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="project-index">P03</span>
+            <span class="status">CONTINUOUS</span>
+          </div>
+          <div class="project-visual stm32">
+            <div class="chip">
+              <span>STM32</span>
+            </div>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">BARE-METAL · RTOS</p>
+            <h3>STM32 Firmware Labs</h3>
+            <p>
+              A growing collection of peripheral drivers and mini-projects covering timing, communication and system behavior.
+            </p>
+            <div class="tags"><span>C</span><span>PWM</span><span>ADC</span><span>DMA</span><span>Modbus</span><span>FreeRTOS</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-top">
+            <span class="project-index">P04</span>
+            <span class="status">PLANNED</span>
+          </div>
+          <div class="project-visual driver">
+            <pre>probe()
+  ├─ alloc
+  ├─ map
+  ├─ irq
+  └─ register</pre>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">KERNEL · DRIVER</p>
+            <h3>Linux Driver Notebook</h3>
+            <p>
+              A future series documenting kernel modules, character devices, device tree, interrupts and platform drivers.
+            </p>
+            <div class="tags"><span>Kernel</span><span>Device Tree</span><span>Character Driver</span><span>IRQ</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="journey">
+      <div class="section-heading reveal">
+        <p class="section-kicker">03 / JOURNEY</p>
+        <h2>A deliberate transition, not a reset.</h2>
+        <p>Every previous role adds context to how I approach embedded systems today.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-line"></div>
+          <div class="timeline-copy">
+            <p class="timeline-label">FOUNDATION</p>
+            <h3>M.S. in Aerospace Engineering</h3>
+            <p>Control systems focus at National Cheng Kung University.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2015–24</div>
+          <div class="timeline-line"></div>
+          <div class="timeline-copy">
+            <p class="timeline-label">SYSTEM EXPERIENCE</p>
+            <h3>Mechanical, semiconductor and robotics roles</h3>
+            <p>Built practical experience in machines, automation, field issues and cross-functional engineering.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2025–26</div>
+          <div class="timeline-line"></div>
+          <div class="timeline-copy">
+            <p class="timeline-label">FIRMWARE</p>
+            <h3>Production embedded firmware</h3>
+            <p>MCU control, communication, debugging, field support and system integration for industrial equipment.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-year">NEXT</div>
+          <div class="timeline-line active"></div>
+          <div class="timeline-copy">
+            <p class="timeline-label">DEEPER LAYER</p>
+            <h3>Embedded Linux / BSP / Driver</h3>
+            <p>Building toward board bring-up, Linux platform integration and kernel-level development.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="notes">
+      <div class="section-heading reveal">
+        <p class="section-kicker">04 / ENGINEERING NOTES</p>
+        <h2>Learning in public.</h2>
+        <p>Short technical notes will turn daily study into visible engineering evidence.</p>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card reveal">
+          <p>2026.07</p>
+          <h3>Docker volumes for embedded SDK development</h3>
+          <span>Linux · Docker</span>
+        </article>
+        <article class="note-card reveal delay-1">
+          <p>2026.07</p>
+          <h3>What the shell <code>source</code> command actually changes</h3>
+          <span>Shell · Toolchain</span>
+        </article>
+        <article class="note-card reveal delay-2">
+          <p>COMING SOON</p>
+          <h3>From Buildroot configuration to bootable image</h3>
+          <span>Buildroot · RK3588</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="section-kicker">05 / CONTACT</p>
+        <h2>Let's build dependable embedded systems.</h2>
+        <p>
+          I'm interested in MCU firmware, Embedded Linux, BSP and device-driver opportunities
+          where I can contribute immediately and continue growing deeper.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your-email@example.com">Email <span>↗</span></a>
+          <a href="#" aria-label="GitHub placeholder">GitHub <span>↗</span></a>
+          <a href="#" aria-label="LinkedIn placeholder">LinkedIn <span>↗</span></a>
+          <a href="#" aria-label="Resume placeholder">Resume <span>↓</span></a>
+        </div>
+        <div class="footer-line">
+          <span>© <span id="year"></span> Leon Wu</span>
+          <span>Designed for the next chapter.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
