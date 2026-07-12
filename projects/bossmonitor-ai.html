@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BossMonitor-AI case study by Chia-Pin Wu, covering Orange Pi Zero, Logitech C270 USB vision, motion detection, Python, OpenCV, Armbian Linux and planned STM32 UART integration." />
+  <meta name="theme-color" content="#08090b" />
+  <title>BossMonitor-AI | Chia-Pin Wu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html#top" aria-label="Chia-Pin Wu home">
+        <span class="brand-dot"></span>
+        LEON.WU
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#journey">Journey</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="../index.html#contact">Let's talk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="project-detail-hero container">
+      <div class="project-detail-grid">
+        <div class="project-detail-copy reveal">
+          <a class="back-link" href="../index.html#projects">Back to projects</a>
+          <p class="eyebrow"><span></span> CASE STUDY</p>
+          <div class="project-title-row">
+            <h1>BossMonitor-AI</h1>
+            <span class="status-badge">In Development</span>
+          </div>
+          <p class="hero-lead">
+            An edge monitoring prototype combining Orange Pi Zero, USB vision, motion detection,
+            and future STM32 control integration.
+          </p>
+          <div class="tags project-hero-tags">
+            <span>Orange Pi Zero</span><span>Logitech C270</span><span>Armbian Linux</span><span>Python</span><span>OpenCV</span><span>STM32</span><span>UART</span>
+          </div>
+          <div class="project-actions">
+            <a class="button primary" href="#architecture">View architecture</a>
+            <a class="button ghost" href="#implementation">Current implementation</a>
+          </div>
+        </div>
+
+        <div class="project-detail-visual reveal delay-1" aria-label="BossMonitor-AI architecture preview">
+          <div class="project-visual boss">
+            <div class="camera-ring"></div>
+            <div class="signal s1"></div>
+            <div class="signal s2"></div>
+            <div class="signal s3"></div>
+          </div>
+          <div class="detail-signal-list" aria-label="Core project components">
+            <span>USB image capture</span>
+            <span>Motion detection</span>
+            <span>Event image saving</span>
+            <span>Detection delay</span>
+            <span>Planned UART link</span>
+            <span>Planned STM32 control</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">01 / OVERVIEW</p>
+        <h2>Practical Embedded Linux work with a clear MCU integration path.</h2>
+        <p>
+          BossMonitor-AI was created to turn camera input, motion detection, event capture and future hardware control
+          into one explainable embedded system.
+        </p>
+      </div>
+
+      <div class="detail-panel-grid">
+        <article class="detail-panel reveal">
+          <p class="project-type">WHY THIS PROJECT EXISTS</p>
+          <h3>Build practical Embedded Linux experience</h3>
+          <p>
+            The project uses Armbian Linux on Orange Pi Zero to practice camera access, Linux device workflow and application-level automation.
+          </p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <p class="project-type">SYSTEM BOUNDARY</p>
+          <h3>Connect Linux applications with MCU firmware</h3>
+          <p>
+            The current software is structured so a UART link to STM32 can be added later without rewriting the camera pipeline.
+          </p>
+        </article>
+        <article class="detail-panel reveal delay-2">
+          <p class="project-type">PRACTICE AREA</p>
+          <h3>Capture events from camera input</h3>
+          <p>
+            The working scope focuses on USB camera image capture, motion detection, saving event images and controlling detection delay.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="architecture">
+      <div class="section-heading reveal">
+        <p class="section-kicker">02 / SYSTEM ARCHITECTURE</p>
+        <h2>Completed vision path, planned MCU control path.</h2>
+        <p>
+          The diagram separates what is already in the prototype from the planned STM32 integration work.
+        </p>
+      </div>
+
+      <div class="architecture-board reveal" aria-label="BossMonitor-AI current and planned architecture">
+        <article class="architecture-stage">
+          <div class="architecture-stage-head">
+            <span class="state-pill completed">Completed</span>
+            <h3>Current architecture</h3>
+          </div>
+          <div class="flow-stack">
+            <div class="flow-card completed">
+              <span>Input</span>
+              <h4>Logitech C270 USB Camera</h4>
+              <p>Camera source connected over USB.</p>
+            </div>
+            <div class="flow-connector"><span>USB</span></div>
+            <div class="flow-card completed">
+              <span>Linux host</span>
+              <h4>Orange Pi Zero / Armbian</h4>
+              <p>Embedded Linux environment for the monitoring application.</p>
+            </div>
+            <div class="flow-connector"><span>runs</span></div>
+            <div class="flow-card completed">
+              <span>Application</span>
+              <h4>Python + OpenCV</h4>
+              <p>Camera capture, frame comparison and motion processing.</p>
+            </div>
+            <div class="flow-connector"><span>detects</span></div>
+            <div class="flow-card completed">
+              <span>Event</span>
+              <h4>Motion Detection</h4>
+              <p>Detects movement and controls repeated capture timing.</p>
+            </div>
+            <div class="flow-connector"><span>records</span></div>
+            <div class="flow-card completed">
+              <span>Output</span>
+              <h4>Save Image / Event Record</h4>
+              <p>Saves images when motion is detected.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="architecture-stage planned">
+          <div class="architecture-stage-head">
+            <span class="state-pill planned">Planned</span>
+            <h3>Planned integration</h3>
+          </div>
+          <div class="flow-stack">
+            <div class="flow-card planned">
+              <span>Linux side</span>
+              <h4>Orange Pi Zero</h4>
+              <p>Will send event data to the MCU layer.</p>
+            </div>
+            <div class="flow-connector planned"><span>UART</span></div>
+            <div class="flow-card planned">
+              <span>MCU side</span>
+              <h4>STM32</h4>
+              <p>Will receive events and execute firmware-side control logic.</p>
+            </div>
+            <div class="flow-connector planned"><span>controls</span></div>
+            <div class="flow-card planned">
+              <span>Hardware</span>
+              <h4>External Control Device</h4>
+              <p>Planned output target controlled by STM32.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="implementation">
+      <div class="section-heading reveal">
+        <p class="section-kicker">03 / CURRENT IMPLEMENTATION</p>
+        <h2>Working functions kept intentionally small and testable.</h2>
+        <p>
+          These are the current software capabilities described as implemented prototype behavior, not final product claims.
+        </p>
+      </div>
+
+      <div class="detail-panel-grid">
+        <article class="detail-panel reveal">
+          <p class="project-type">CAMERA CAPTURE</p>
+          <h3>USB camera image capture</h3>
+          <p>Captures frames from a Logitech C270 camera connected to the Orange Pi Zero.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <p class="project-type">VISION PIPELINE</p>
+          <h3>Motion detection</h3>
+          <p>Uses Python and OpenCV to identify motion from camera input.</p>
+        </article>
+        <article class="detail-panel reveal delay-2">
+          <p class="project-type">EVENT OUTPUT</p>
+          <h3>Event image saving</h3>
+          <p>Saves images when motion is detected so each event leaves reviewable evidence.</p>
+        </article>
+        <article class="detail-panel reveal">
+          <p class="project-type">CAPTURE CONTROL</p>
+          <h3>Detection delay control</h3>
+          <p>Uses a configurable delay to avoid repeated image captures from one continuous motion event.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">04 / TECHNICAL STACK</p>
+        <h2>A focused stack across Linux, vision and MCU integration.</h2>
+        <p>
+          The stack is narrow by design so each layer can be explained during a technical interview.
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <article class="detail-panel reveal">
+          <p class="project-type">PLATFORM</p>
+          <h3>Orange Pi Zero</h3>
+          <p>Embedded Linux board used as the edge monitoring host.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <p class="project-type">CAMERA</p>
+          <h3>Logitech C270</h3>
+          <p>USB camera used for frame capture and motion detection input.</p>
+        </article>
+        <article class="detail-panel reveal">
+          <p class="project-type">OS</p>
+          <h3>Armbian Linux</h3>
+          <p>Linux environment for camera access and application execution.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <p class="project-type">SOFTWARE</p>
+          <h3>Python + OpenCV</h3>
+          <p>Application layer for image capture and motion detection.</p>
+        </article>
+        <article class="detail-panel reveal">
+          <p class="project-type">MCU</p>
+          <h3>STM32</h3>
+          <p>Planned firmware-side controller for external device output.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <p class="project-type">INTERFACE</p>
+          <h3>UART</h3>
+          <p>Planned serial boundary between the Linux board and STM32.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">05 / ENGINEERING CHALLENGES</p>
+        <h2>Grounded problems from building the prototype.</h2>
+        <p>
+          The useful work here is in making Linux camera input reliable and leaving room for MCU integration.
+        </p>
+      </div>
+
+      <div class="detail-list-grid">
+        <article class="detail-panel reveal">
+          <h3>Camera setup on Linux</h3>
+          <p>Setting up the USB camera on Linux and confirming that the device is visible to the system.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <h3>Camera access verification</h3>
+          <p>Verifying camera access with Linux tools before relying on the Python application path.</p>
+        </article>
+        <article class="detail-panel reveal">
+          <h3>Repeated capture control</h3>
+          <p>Avoiding repeated image captures from one continuous motion event with configurable delay behavior.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <h3>Future UART boundary</h3>
+          <p>Structuring the software so STM32 UART integration can be added later as a separate control layer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">06 / WHAT I LEARNED</p>
+        <h2>Evidence of learning across the Linux-to-MCU path.</h2>
+        <p>
+          The project connects low-level workflow practice with a future hardware-control direction.
+        </p>
+      </div>
+
+      <div class="detail-list-grid">
+        <article class="detail-panel reveal">
+          <h3>Linux camera device workflow</h3>
+          <p>How to reason about USB camera access from the Linux system layer before application development.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <h3>OpenCV motion-detection pipeline</h3>
+          <p>How camera frames can be processed into motion events with a basic OpenCV workflow.</p>
+        </article>
+        <article class="detail-panel reveal">
+          <h3>Event-driven image capture</h3>
+          <p>How to trigger image saving from detected events instead of continuously saving frames.</p>
+        </article>
+        <article class="detail-panel reveal delay-1">
+          <h3>Linux-to-MCU integration boundary</h3>
+          <p>How to plan a UART boundary where Linux application events can later drive STM32 firmware behavior.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">07 / PLANNED NEXT STEPS</p>
+        <h2>Next work is labeled as planned, not completed.</h2>
+        <p>
+          These items describe the intended direction for the prototype after the current motion-capture workflow.
+        </p>
+      </div>
+
+      <div class="detail-list-grid">
+        <article class="detail-panel planned-card reveal">
+          <p class="project-type">PLANNED</p>
+          <h3>UART protocol</h3>
+          <p>Define communication between Orange Pi Zero and STM32.</p>
+        </article>
+        <article class="detail-panel planned-card reveal delay-1">
+          <p class="project-type">PLANNED</p>
+          <h3>STM32 control output</h3>
+          <p>Add firmware-side output behavior for external devices.</p>
+        </article>
+        <article class="detail-panel planned-card reveal">
+          <p class="project-type">PLANNED</p>
+          <h3>Better event filtering</h3>
+          <p>Improve filtering so event records better match meaningful motion.</p>
+        </article>
+        <article class="detail-panel planned-card reveal delay-1">
+          <p class="project-type">PLANNED</p>
+          <h3>Logging and configuration</h3>
+          <p>Add clearer runtime records and adjustable configuration.</p>
+        </article>
+        <article class="detail-panel planned-card reveal">
+          <p class="project-type">PLANNED</p>
+          <h3>Lightweight edge-AI recognition</h3>
+          <p>Explore possible lightweight recognition features on the edge side.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-detail-cta">
+      <div class="container reveal">
+        <p class="section-kicker">08 / PROJECT NAVIGATION</p>
+        <h2>Continue through the embedded portfolio.</h2>
+        <div class="project-nav-grid">
+          <a class="project-nav-card" href="../index.html#top">
+            <span>Home</span>
+            <strong>Back to homepage</strong>
+          </a>
+          <a class="project-nav-card" href="../index.html#projects">
+            <span>Projects</span>
+            <strong>Back to Projects section</strong>
+          </a>
+          <a class="project-nav-card" href="../index.html#contact">
+            <span>Contact</span>
+            <strong>Contact Chia-Pin Wu</strong>
+          </a>
+          <article class="project-nav-card project-nav-card-static" aria-label="Source repository coming soon">
+            <span>GitHub</span>
+            <strong>Source repository coming soon</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
