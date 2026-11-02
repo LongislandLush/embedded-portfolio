@@ -214,6 +214,41 @@
             <div class="tags"><span>Kernel</span><span>Device Tree</span><span>Character Driver</span><span>IRQ</span></div>
           </div>
         </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="project-index">P05</span>
+            <span class="status">DOCUMENTED LABS · PASS</span>
+          </div>
+          <div class="project-visual buildroot">
+            <code>Device Tree · /dev · /sys<br>/proc · PID 1 · systemd</code>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">EMBEDDED LINUX · RUNTIME INSPECTION</p>
+            <h3>LubanCat RK3588 Linux Inspection Labs</h3>
+            <p>
+              Tested on Embedfire LubanCat-5 V2 (RK3588 / AArch64), Ubuntu 26.04 LTS, Linux 6.1.118.
+              Completed read-only inspection labs with documented commands, observed output and PASS records.
+            </p>
+            <p>
+              Device Tree (2026-10-26): five checks passed for model, compatible strings, NUL separators,
+              bootargs and the DTB path in the U-Boot log.
+            </p>
+            <p>
+              Device nodes / udev: matched character-device major/minor numbers with sysfs and inspected udev properties.
+              Processes / systemd (2026-10-30): verified PID 1, PID/PPID and /proc; observed SSH socket listening
+              and its service activation relationships.
+            </p>
+            <p>
+              Scope: runtime observation on an existing Linux image; BSP porting, Buildroot image creation
+              and driver implementation remain future work.
+            </p>
+            <p><a class="project-link" href="https://github.com/LongislandLush/embedded_linux_labs/blob/main/linux-fundamentals/02-device-tree-inspection/README.md" target="_blank" rel="noopener noreferrer">Device Tree Lab 02 — README</a></p>
+            <p><a class="project-link" href="https://github.com/LongislandLush/LubanCat-BSP-Roadmap/blob/main/Day02_Device_Nodes_udev/README.md" target="_blank" rel="noopener noreferrer">Device Nodes / udev Day02 — README</a></p>
+            <p><a class="project-link" href="https://github.com/LongislandLush/LubanCat-BSP-Roadmap/blob/main/Day03_Process_PID_systemd/README.md" target="_blank" rel="noopener noreferrer">Processes / systemd Day03 — README</a></p>
+            <div class="tags"><span>RK3588</span><span>Device Tree</span><span>udev</span><span>/proc</span><span>systemd</span></div>
+          </div>
+        </article>
       </div>
     </section>
 
